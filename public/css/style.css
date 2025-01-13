@@ -105,6 +105,30 @@ body {
 img{
     width: 200px;
     z-index: 1;
-    opacity: 50%;
-    
+    opacity: 50%;   
+}
+
+.sponso{
+    text-decoration: underline;
+}
+
+.sponso:hover{
+    color: black;
+
+}
+
+.ice-cube{
+    width: 20px;
+    height: 20px;
+    background-color: cyan;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.ice-cube.show{
+    transform: translateX(-50%) scale(1);
 }

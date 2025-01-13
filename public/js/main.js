@@ -5,6 +5,7 @@ let goal = 2000
         let percentage = document.getElementById('percentage')
         let remaining = document.getElementById('remaining')
         let bottles = document.querySelectorAll('.bottle')
+        let iceCube = document.getElementById('iceCube')
 
         bottles.forEach((bottle, index) => {
             bottle.addEventListener('click', () => {
@@ -38,4 +39,9 @@ let goal = 2000
             percentage.textContent = `${Math.round(percent)}%`
             percentage.style.bottom = `${percent}`
             remaining.textContent = `${goal - currentVolume} Remained`
+            if (currentVolume === goal){
+                iceCube.classList.add('show')
+            } else {
+                iceCube.classList.remove('show')
+            }
         }
